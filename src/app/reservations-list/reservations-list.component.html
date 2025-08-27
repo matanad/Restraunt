@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let reservation of reservations">
+    <app-reservation [reservation]="reservation" />
+    <button class="delete-btn" (click)="onDelete(reservation.id)">X</button>
+  </li>
+</ul>

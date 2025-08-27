@@ -1,0 +1,79 @@
+form {
+  max-width: 500px;           // רוחב מקסימלי
+  margin: 20px auto;           // מרכז את הטופס
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+  div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+
+    label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    input, select {
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+      &:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+        outline: none;
+      }
+    }
+
+    select {
+      background-color: #fff;
+      appearance: none;           // הסרת ברירת מחדל של חץ
+      cursor: pointer;
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+
+    &:hover {
+      background-color: #0056b3;
+      transform: translateY(-1px);
+    }
+
+    &:disabled {
+      background-color: #aaa;
+      cursor: not-allowed;
+      transform: none;
+    }
+  }
+}
+
+// התאמה למובייל
+@media (max-width: 600px) {
+  form {
+    padding: 15px;
+
+    div {
+      margin-bottom: 12px;
+    }
+
+    button {
+      padding: 10px;
+    }
+  }
+}

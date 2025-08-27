@@ -1,0 +1,12 @@
+<ul>
+  <li *ngFor="let table of tables$()">
+    <div class="table-wrapper">
+      <app-table [table]="table"></app-table>
+
+      <div class="reservation-modal">
+        <h4>Reservations Details</h4>
+        <app-reservations-list [tableId]="table.id"></app-reservations-list>
+      </div>
+    </div>
+  </li>
+</ul>

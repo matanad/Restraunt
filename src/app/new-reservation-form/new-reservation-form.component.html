@@ -1,0 +1,30 @@
+<form [formGroup]="reservationForm" (ngSubmit)="submit()">
+  <div>
+    <label>Table Number:</label>
+    <select formControlName="tableNumber">
+      <option value="" disabled selected>Select a table</option>
+      <option *ngFor="let table of tables" [value]="table.number">
+        Table {{ table.number }} (Capacity: {{ table.capacity }})
+      </option>
+    </select>
+  </div>
+
+  <div>
+    <label>Customer Name:</label>
+    <input type="text" formControlName="customerName" />
+  </div>
+
+  <div>
+    <label>Reservation Time:</label>
+    <input type="datetime-local" formControlName="reservationTime" />
+  </div>
+
+  <div>
+    <label>Guests:</label>
+    <input type="number" formControlName="guests" />
+  </div>
+
+  <button type="submit" [disabled]="reservationForm.invalid">
+    Create Reservation
+  </button>
+</form>

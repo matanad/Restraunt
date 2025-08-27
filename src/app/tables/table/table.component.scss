@@ -1,0 +1,28 @@
+:host {
+  display: block;
+  background-color: #f5f5f5;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+}
+
+.table_number {
+  font-size: 1.5rem;          // כותרת גדולה
+  font-weight: bold;
+  color: #333;                // צבע כהה לקריאות
+  margin: 0 0 8px 0;          // רווח מתחת לכותרת
+}
+
+h2 {
+  font-size: 1.2rem;          // קצת יותר קטן מה-h1
+  font-weight: 500;
+  color: #666;                // צבע מעט בהיר יותר
+  margin: 0;
+}

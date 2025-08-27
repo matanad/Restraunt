@@ -1,0 +1,42 @@
+ul {
+  list-style: none;       // ללא נקודות
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;              // רווח בין פריטים
+  max-width: 600px;       // רוחב מקסימלי
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+li {
+  display: flex;
+  align-items: center;     // שולח את הכפתור לאותו קו
+  justify-content: space-between; // תוכן מצד שמאל, כפתור מצד ימין
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px 14px;
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  }
+}
+
+.delete-btn {
+  background-color: #e74c3c; // אדום למחיקה
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #c0392b;
+  }
+}

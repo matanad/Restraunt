@@ -1,0 +1,53 @@
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 900px;
+  width: 100%;
+}
+
+li {
+  position: relative;
+}
+
+.table-wrapper {
+  position: relative;
+
+  .reservation-modal {
+    display: none; /* מוסתר כברירת מחדל */
+    position: absolute;
+    top: 100%;        // מתחת לשולחן
+    left: 0;
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 12px;
+    z-index: 10;
+
+    h4 {
+      margin: 0 0 8px 0;
+      font-size: 1.1rem;
+      color: #333;
+    }
+  }
+
+  &:hover .reservation-modal {
+    display: block;  // מופיע בעת hover
+  }
+}
+
+.reservation-modal {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+
+  .table-wrapper:hover & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
